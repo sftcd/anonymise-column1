@@ -25,7 +25,7 @@ The CSV file can be provided as a command line argument. If none is provided
 then the script will read from stdin.
 
 You have to set a secret value to use for the key in the keyed hash.  You can
-do that by setting a value fof ``$AC1_SECRET`` in the environment. If no such
+do that by setting a value for ``$AC1_SECRET`` in the environment. If no such
 value is set, then the script will prompt the user to enter the secret.
 
 Under the hood, we do a HMAC-SHA256 using the secret as the key and we select
