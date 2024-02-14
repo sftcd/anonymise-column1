@@ -35,7 +35,7 @@ of the input.
 It should be easy enough to change the fixed values, so we'll not bother making
 that more generic.
 
-In case it helps, and though I'm not sure of the providence, [this web
+In case it helps, and though I'm not sure of the provenance, [this web
 page](https://www.i-scoop.eu/gdpr/pseudonymization/) does recommend this
 pseudonymization technique. In any case, I recall related discussions when the
 GDPR was still "fresh" and this is what I recall folks recommending.
