@@ -11,7 +11,7 @@ $ head -3 input.csv
 ID,col2,col3
 10334051,x,1
 11313330,y,2
-$ cat input.csv | AC1_SECRET=foo ac1.sh >output.csv
+$ cat input.csv | AC1_SECRET=foo ac1.sh
 ID,col2,col3
 101af86c,x,1
 150b1512,y,2
