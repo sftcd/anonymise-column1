@@ -40,3 +40,30 @@ page](https://www.i-scoop.eu/gdpr/pseudonymization/) does recommend this
 pseudonymization technique. In any case, I recall related discussions when the
 GDPR was still "fresh" and this is what I recall folks recommending.
 
+## Handling the secret...
+
+As there are only about 100k real student numbers in question,
+a plain (un-keyed) hash of those could be easily reversed via
+a brute force attack. So we should pick a secret that is not
+vulnerable to such an attack, or a dictionary attack.
+
+One way to do that would be to use ``openssl`` to generate
+a random number, then set ``$AC1_SECRET`` using that, e.g.:
+
+```bash
+$ export AC1_SECRET=`openssl rand -hex 32`
+$ echo $AC1_SECRET >secret-file
+$ cat secret-file
+9e1f97a7254951d1c357aa8c71618a45ee6dccc4e5eca28734c166cbfc1c6137
+```
+
+If we want to generate the same pseudonymized identifier for
+the same input student number multiple times, e.g. each year
+when regenerating statistics, then we'll need to have stored
+that secret somewhere in the meantime. If we did the above
+then to re-use that secret:
+
+```bash
+$ export AC1_SECRET=`cat secret-file`
+```
+
