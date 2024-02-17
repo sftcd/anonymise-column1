@@ -13,9 +13,9 @@ ID,col2,col3
 11313330,y,2
 $ cat input.csv | AC1_SECRET=foo ./ac1.sh
 ID,col2,col3
-101af86c,x,1
-150b1512,y,2
-b4b691d0,z,3
+2ac0e32e,x,1
+126145ad,y,2
+04a285f1,z,3
 ```
 
 Usage:
