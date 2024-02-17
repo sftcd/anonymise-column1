@@ -58,7 +58,7 @@ fi
 
 # In any case, we'll use the ascii-hex of the secret to
 # keep openssl happy
-hexsecret=`echo $AC1_SECRET | $XXD -ps -c200`
+hexsecret=`echo -n $AC1_SECRET | $XXD -ps -c200`
 
 # keyed-hash function
 kh(){
